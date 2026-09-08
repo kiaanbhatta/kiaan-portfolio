@@ -683,13 +683,16 @@ nav a:hover {
 .projects-grid {
     display: grid;
 
-    /* */
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
 
     gap: 25px;
-    /* */
 
 }
+
+
+
+
 
 .project-card {
     border: 1px solid #e5e5e5;
