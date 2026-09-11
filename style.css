@@ -450,29 +450,28 @@ nav a:hover {
 }
 
 
-.about-grid {
-    display: grid;
+/* .about-grid { */
+/* display: grid; */
 
-    /* */
-    grid-template-columns: 1.3fr 0.7fr;
+/* */
+/* grid-template-columns: 1.3fr 0.7fr; */
 
-    gap: 80px;
-    /* */
+/* gap: 80px; */
+/* */
 
-}
+/* } */
 
 .about-text {
-    max-width: 700px;
+    /* max-width: 1200px; */
+    text-align: center;
 }
 
 .about-text p {
     color: #666666;
 
-    /* */
     font-size: 17px;
 
-    margin-bottom: 20px;
-    /* */
+    margin-bottom: 10px;
 
 }
 
@@ -483,18 +482,17 @@ nav a:hover {
 .about-info {
     display: grid;
 
-    /* */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
     gap: 12px;
-    /* */
+
+
 
 }
 
 .info-box {
     border: 1px solid #e7e7e7;
 
-    /* */
     border-radius: 10px;
 
     padding: 25px;
@@ -504,21 +502,22 @@ nav a:hover {
 
     justify-content: center;
 
-    transition: 0.3s ease;
-    /* */
+    transition: 0.5s ease;
+    background-color: oklch(99% .005 240);
+    text-align: center;
 
 }
 
 .info-box:hover {
     border-color: #2563eb;
 
-    /* */
-    transform: translateY(-5px);
-    transform: scale(1.03);
+    transform: scale(1.2);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
     /* */
 
 }
+
+
 
 .info-box strong {
     font-size: 30px;
@@ -529,6 +528,7 @@ nav a:hover {
 
     /* */
     font-size: 13px;
+    font-weight: bolder;
     /* */
 
 }
@@ -684,7 +684,7 @@ nav a:hover {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
 
     gap: 25px;
 
@@ -1158,7 +1158,7 @@ RESPONSIVE DESIGN
 
 @media (max-width: 600px) {
 
-   
+
 
     /* ---------- Hero ---------- */
 
@@ -1475,17 +1475,31 @@ body {
 }
 
 /* Page-load choreography */
-.hero-content > * {
+.hero-content>* {
     opacity: 0;
     transform: translateY(22px);
     animation: heroItemIn 0.85s cubic-bezier(.22, 1, .36, 1) forwards;
 }
 
-.hero-content > :nth-child(1) { animation-delay: 0.08s; }
-.hero-content > :nth-child(2) { animation-delay: 0.18s; }
-.hero-content > :nth-child(3) { animation-delay: 0.30s; }
-.hero-content > :nth-child(4) { animation-delay: 0.43s; }
-.hero-content > :nth-child(5) { animation-delay: 0.56s; }
+.hero-content> :nth-child(1) {
+    animation-delay: 0.08s;
+}
+
+.hero-content> :nth-child(2) {
+    animation-delay: 0.18s;
+}
+
+.hero-content> :nth-child(3) {
+    animation-delay: 0.30s;
+}
+
+.hero-content> :nth-child(4) {
+    animation-delay: 0.43s;
+}
+
+.hero-content> :nth-child(5) {
+    animation-delay: 0.56s;
+}
 
 .hero-card {
     opacity: 0;
@@ -1507,6 +1521,7 @@ body {
         opacity: 0;
         transform: translate3d(35px, 18px, 0) scale(.97);
     }
+
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0) scale(1);
@@ -1535,8 +1550,15 @@ body {
 }
 
 @keyframes ambientDrift {
-    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-    50% { transform: translate3d(-20px, 25px, 0) scale(1.08); }
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(-20px, 25px, 0) scale(1.08);
+    }
 }
 
 /* Scroll reveal states */
@@ -1613,12 +1635,10 @@ body {
     left: -75%;
     width: 42%;
     height: 100%;
-    background: linear-gradient(
-        105deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.22) 48%,
-        transparent 100%
-    );
+    background: linear-gradient(105deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.22) 48%,
+            transparent 100%);
     transform: skewX(-18deg);
     pointer-events: none;
     opacity: 0;
@@ -1663,12 +1683,10 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        115deg,
-        transparent 25%,
-        rgba(255,255,255,.22) 50%,
-        transparent 75%
-    );
+    background: linear-gradient(115deg,
+            transparent 25%,
+            rgba(255, 255, 255, .22) 50%,
+            transparent 75%);
     transform: translateX(-130%);
     transition: transform 0.65s ease;
     pointer-events: none;
@@ -1786,12 +1804,10 @@ nav a.active::after,
     pointer-events: none;
     z-index: 9998;
     opacity: 0;
-    background: radial-gradient(
-        circle,
-        rgba(37, 99, 235, .075) 0%,
-        rgba(37, 99, 235, .025) 38%,
-        transparent 70%
-    );
+    background: radial-gradient(circle,
+            rgba(37, 99, 235, .075) 0%,
+            rgba(37, 99, 235, .025) 38%,
+            transparent 70%);
     transform: translate3d(-50%, -50%, 0);
     will-change: transform;
     transition: opacity .3s ease;
@@ -1859,10 +1875,10 @@ nav a.active::after,
         right: 12px;
         flex-direction: column;
         padding: 8px;
-        background: rgba(255,255,255,.97);
+        background: rgba(255, 255, 255, .97);
         border: 1px solid #e5e5e5;
         border-radius: 12px;
-        box-shadow: 0 18px 45px rgba(0,0,0,.10);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, .10);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         opacity: 0;
@@ -1896,12 +1912,29 @@ nav a.active::after,
         transform: translateY(0);
     }
 
-    .mobile-nav-panel.is-open a:nth-child(1) { transition-delay: .03s; }
-    .mobile-nav-panel.is-open a:nth-child(2) { transition-delay: .06s; }
-    .mobile-nav-panel.is-open a:nth-child(3) { transition-delay: .09s; }
-    .mobile-nav-panel.is-open a:nth-child(4) { transition-delay: .12s; }
-    .mobile-nav-panel.is-open a:nth-child(5) { transition-delay: .15s; }
-    .mobile-nav-panel.is-open a:nth-child(6) { transition-delay: .18s; }
+    .mobile-nav-panel.is-open a:nth-child(1) {
+        transition-delay: .03s;
+    }
+
+    .mobile-nav-panel.is-open a:nth-child(2) {
+        transition-delay: .06s;
+    }
+
+    .mobile-nav-panel.is-open a:nth-child(3) {
+        transition-delay: .09s;
+    }
+
+    .mobile-nav-panel.is-open a:nth-child(4) {
+        transition-delay: .12s;
+    }
+
+    .mobile-nav-panel.is-open a:nth-child(5) {
+        transition-delay: .15s;
+    }
+
+    .mobile-nav-panel.is-open a:nth-child(6) {
+        transition-delay: .18s;
+    }
 
     .mobile-nav-panel a:hover,
     .mobile-nav-panel a.active {
@@ -1959,7 +1992,7 @@ nav a.active::after,
     .motion-right,
     .motion-scale,
     .stagger-item,
-    .hero-content > *,
+    .hero-content>*,
     .hero-card {
         opacity: 1 !important;
         transform: none !important;
@@ -1982,7 +2015,8 @@ nav a.active::after,
    ========================================================= */
 
 /* Prevent any animated/transformed element from creating sideways overflow. */
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -2433,4 +2467,3 @@ img {
         animation: none !important;
     }
 }
-
