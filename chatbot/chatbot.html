@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Kiaan Bhatta | Software Engineer & AI/ML Enthusiast</title>
+
+    <meta name="description"
+        content="Kiaan Bhatta - Class 9 student, frontend developer and future Software Engineer & AI/ML Engineer.">
+
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                Kiaan<span>.</span>
+            </a>
+
+            <nav>
+                <a href="/index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="/project.html">Projects</a>
+                <a href="#services">Services</a>
+                <a href="chatbot/chatbot.html">Chat Bot</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#contact" class="nav-button">
+                Let's Talk
+            </a>
+
+        </div>
+    </header>
+
+
+    <body>
+
+        <div class="background">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+        </div>
+
+        <div class="app">
+
+            <!-- HEADER -->
+            <header class="header">
+
+                <div class="brand">
+
+                    <div class="bot-logo">
+                        <span>K</span>
+                        <div class="pulse"></div>
+                    </div>
+
+                    <div>
+                        <h1>Kiaan AI</h1>
+                        <div class="status">
+                            <span></span>
+                            Online
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="info-button" title="About Kiaan">
+                    ✦
+                </button>
+
+            </header>
+
+
+            <!-- CHAT -->
+            <main class="chat-box" id="chatBox">
+
+                <div class="welcome">
+
+                    <div class="welcome-icon">
+                        ✨
+                    </div>
+
+                    <h2>Meet Kiaan AI</h2>
+
+                    <p>
+                        Ask me anything about Kiaan Bhatta,
+                        his technology journey, projects, skills,
+                        goals and online profiles.
+                    </p>
+
+                </div>
+
+
+                <!-- INITIAL MESSAGE -->
+                <div class="message bot-message">
+
+                    <div class="avatar">
+                        K
+                    </div>
+
+                    <div class="bubble">
+
+                        <div class="bubble-top">
+                            <strong>Kiaan AI</strong>
+                            <span>now</span>
+                        </div>
+
+                        <p>
+                            Hi! 👋 I'm Kiaan AI.
+                        </p>
+
+                        <p>
+                            I can tell you about <strong>Kiaan Bhatta</strong>,
+                            including his projects, programming journey,
+                            skills, career goals and public profiles.
+                        </p>
+
+                        <p>
+                            What would you like to know?
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+
+            <!-- SUGGESTIONS -->
+            <div class="suggestions">
+
+                <button onclick="askQuestion('Who is Kiaan Bhatta?')">
+                    👤 Who is Kiaan?
+                </button>
+
+                <button onclick="askQuestion('What projects has Kiaan built?')">
+                    🚀 Projects
+                </button>
+
+                <button onclick="askQuestion('What are Kiaan skills?')">
+                    💻 Skills
+                </button>
+
+                <button onclick="askQuestion('What is Kiaan learning?')">
+                    📚 Learning
+                </button>
+
+                <button onclick="askQuestion('What are Kiaan career goals?')">
+                    🎯 Goals
+                </button>
+
+                <button onclick="askQuestion('Give me Kiaan social media links')">
+                    🔗 Socials
+                </button>
+
+            </div>
+
+
+            <!-- INPUT -->
+            <form class="input-area" id="chatForm">
+
+                <input type="text" id="userInput" placeholder="Ask me about Kiaan..." autocomplete="off">
+
+                <button type="submit" id="sendButton">
+                    <span>↑</span>
+                </button>
+
+            </form>
+
+            <div class="footer">
+                Kiaan AI • Personal Knowledge Assistant
+            </div>
+
+        </div>
+
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

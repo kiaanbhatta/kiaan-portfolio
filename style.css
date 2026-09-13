@@ -158,7 +158,8 @@ nav a:hover {
 
 .hero h1 span {
     display: block;
-    color: #2563eb;
+    color: oklch(45% .02 240);
+
 }
 
 .hero-description {
@@ -2466,4 +2467,217 @@ img {
     .hero::after {
         animation: none !important;
     }
+}
+
+
+/* =========================================
+   FLOATING WHATSAPP BUTTON
+========================================= */
+
+.ai-float {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 62px;
+    height: 62px;
+
+    background: #25D366;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    z-index: 999;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .35);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    animation: whatsappFloat 2.5s ease-in-out infinite;
+}
+
+
+.ai-float:hover {
+    transform: scale(1.12);
+
+    box-shadow:
+        0 15px 40px rgba(37, 211, 102, .35);
+}
+
+
+/* PULSING RING */
+
+.ai-pulse {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    border: 2px solid #25D366;
+
+    animation: whatsappPulse 1.8s ease-out infinite;
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+        transform: scale(1);
+        opacity: .8;
+    }
+
+    70% {
+        transform: scale(1.45);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.45);
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes whatsappFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .ai-float {
+        width: 55px;
+        height: 55px;
+
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .ai-float svg {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+
+/* =========================================
+   LOADER
+========================================= */
+
+.loader {
+    position: fixed;
+    inset: 0;
+    background: #050505;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    transition: .8s ease;
+}
+
+.loader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-logo {
+    font-family: "Bebas Neue";
+    font-size: 42px;
+    letter-spacing: 3px;
+}
+
+.loader-logo span {
+    color: #ffffff;
+}
+
+.loader-line {
+    width: 120px;
+    height: 2px;
+    background: #00E5FF;
+    margin-top: 20px;
+
+    animation: loader 1.2s infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: scaleX(0);
+    }
+
+    50% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+
+.typing-text {
+    color: oklch(45% .02 240);
+    font-family: monospace;
+    white-space: nowrap;
+    letter-spacing: 2px;
+
+    font-size: 30px;
+
+    font-weight: 100;
+}
+
+
+@media(max-width:600px) {
+
+    .typing-text {
+        font-size: 20px;
+
+    }
+
+}
+
+
+.gradient-name {
+    /* font-size: 50px; */
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(90deg,
+            #e53935,
+            #9c4d97,
+            #3949ab);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
+
+.name-with-color {
+    display: flex;
+    gap: 10px;
 }
