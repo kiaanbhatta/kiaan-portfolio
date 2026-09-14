@@ -20,11 +20,11 @@
 ========================= */
 
 .app {
-    margin: 30px auto;
+    margin: 10px auto;
     position: relative;
 
     width: min(760px, 94vw);
-    height: min(850px, 94vh);
+    height: min(800px, 90vh);
 
     background: rgba(255, 255, 255, 0.88);
 

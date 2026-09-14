@@ -18,6 +18,7 @@ const kiaan = {
     education: "Class 9",
 
     careerGoals: [
+        "Google Software Engineer",
         "Software Engineer",
         "AI/ML Engineer",
         "Full-Stack Developer"
@@ -27,7 +28,8 @@ const kiaan = {
         "Web Development",
         "JavaScript",
         "Programming",
-        "AI Tools"
+        "AI Tools",
+        "Git and Github"
     ],
 
     futureFocus: [
@@ -35,7 +37,7 @@ const kiaan = {
         "Artificial Intelligence",
         "Machine Learning",
         "Full-Stack Development",
-        "Cybersecurity"
+        "Software Engineering"
     ],
 
     skills: [
@@ -93,11 +95,6 @@ const kiaan = {
                 "A website/form project created for Bhumiraj Computer Institute."
         },
 
-        {
-            name: "Modern Login & Signup Page",
-            description:
-                "A frontend authentication interface project created while practicing web development."
-        },
 
         {
             name: "AI Chatbot Projects",
@@ -200,7 +197,7 @@ const kiaan = {
             "https://github.com/kiaanbhatta",
 
         linkedin:
-            "https://www.linkedin.com/in/kiaan-bhatta-737a4a412/",
+            "https://www.linkedin.com/in/kiaanbhatta/",
 
         facebook:
             "https://www.facebook.com/kiaanbhatta2",
@@ -212,7 +209,7 @@ const kiaan = {
             "https://linktr.ee/kiaanbhatta",
 
         youtube:
-            "YOUR_YOUTUBE_LINK_HERE"
+            "https://www.youtube.com/@KiaanBhatta"
 
     }
 
@@ -290,11 +287,11 @@ function projectList() {
 
         ${kiaan.projects.map((project, index) => {
 
-            const projectLink = project.link
-                ? ` — ${link("View project", project.link)}`
-                : "";
+        const projectLink = project.link
+            ? ` — ${link("View project", project.link)}`
+            : "";
 
-            return `
+        return `
                 <strong>${index + 1}. ${project.name}</strong>
                 <br>
                 ${project.description}
@@ -302,7 +299,7 @@ function projectList() {
                 <br><br>
             `;
 
-        }).join("")}
+    }).join("")}
     `;
 }
 
@@ -340,6 +337,31 @@ function getAnswer(question) {
             Ask me anything about Kiaan Bhatta,
             his projects, skills, learning journey,
             career goals or public profiles.
+        `;
+    }
+
+    if (
+        q === "gita" ||
+        q === "khem" ||
+        q.includes("khem") ||
+        q.includes("gita")
+
+        
+    ) {
+
+        return `
+            rajmati,
+            jay,
+            dev,
+            kamala,
+            shanti,
+            indra,
+            godawari,
+            ram,
+            bishnu,
+            dhani,
+            narendra_modi,
+            parwati
         `;
     }
 
@@ -382,6 +404,58 @@ function getAnswer(question) {
 
 
     // ----------------------------------------------
+    // WHO IS KIROS
+    // ----------------------------------------------
+
+    if (
+        q.includes("kiros")||
+        q.includes("who is kiros") ||
+        q.includes("who is kiros") ||
+        q.includes("tell me about kiros") ||
+        q.includes("about kiros")
+    ) {
+
+        return `
+            <strong>Kiros Bhatta</strong> is Kiaan's brother
+
+            <br><br>
+
+            His website :-
+            kirosbhatta.netlify.app
+
+           
+        `;
+    }
+
+    // ----------------------------------------------
+    // Friends
+    // ----------------------------------------------
+
+    if (
+        q.includes("aayush")||
+        q.includes("aasish")||
+        q.includes("rojin")||
+        q.includes("anmol")||
+        q.includes("ridam")||
+        q.includes("prashant")||
+        q.includes("pratik")||
+        q.includes("saroj")
+        
+    ) {
+
+        return `
+            <strong>He</strong> is Kiaan's Friend
+
+            <br><br>
+
+            
+
+           
+        `;
+    }
+
+
+    // ----------------------------------------------
     // AGE
     // ----------------------------------------------
 
@@ -394,6 +468,23 @@ function getAnswer(question) {
             Kiaan is <strong>15 years old</strong>.
         `;
     }
+
+    // ----------------------------------------------
+    // AGE
+    // ----------------------------------------------
+
+    if (
+        q.includes("gf") ||
+        q.includes("wife") ||
+        q.includes("girl friend") ||
+        q.includes("girlfriend")
+    ) {
+
+        return `
+            <strong>your Mom</strong>.
+        `;
+    }
+
 
 
     // ----------------------------------------------
@@ -435,6 +526,7 @@ function getAnswer(question) {
 
             <br><br>
 
+            💪🏼 <strong>Google Software Engineer</strong><br>
             🎯 <strong>Software Engineer</strong><br>
             🤖 <strong>AI/ML Engineer</strong><br>
             💻 <strong>Full-Stack Developer</strong>
@@ -466,8 +558,8 @@ function getAnswer(question) {
             <br><br>
 
             ${kiaan.skills.map(skill =>
-                `• ${skill}`
-            ).join("<br>")}
+            `• ${skill}`
+        ).join("<br>")}
 
             <br><br>
 
@@ -548,9 +640,9 @@ function getAnswer(question) {
             <br><br>
 
             ${link(
-                "🌐 View Bineshwor School Website",
-                "https://bineshwor.vercel.app/"
-            )}
+            "🌐 View Bineshwor School Website",
+            "https://bineshwor.vercel.app/"
+        )}
         `;
     }
 
@@ -628,9 +720,9 @@ function getAnswer(question) {
             <br><br>
 
             ${link(
-                "💻 Visit Kiaan's GitHub",
-                kiaan.links.github
-            )}
+            "💻 Visit Kiaan's GitHub",
+            kiaan.links.github
+        )}
         `;
     }
 
@@ -648,9 +740,9 @@ function getAnswer(question) {
             <br><br>
 
             ${link(
-                "💼 Visit Kiaan's LinkedIn",
-                kiaan.links.linkedin
-            )}
+            "💼 Visit Kiaan's LinkedIn",
+            kiaan.links.linkedin
+        )}
         `;
     }
 
@@ -670,9 +762,9 @@ function getAnswer(question) {
             <br><br>
 
             ${link(
-                "📘 Kiaan Bhatta on Facebook",
-                kiaan.links.facebook
-            )}
+            "📘 Kiaan Bhatta on Facebook",
+            kiaan.links.facebook
+        )}
         `;
     }
 
@@ -693,9 +785,9 @@ function getAnswer(question) {
             <br><br>
 
             ${link(
-                "🎵 @kiaanbhatta on TikTok",
-                kiaan.links.tiktok
-            )}
+            "🎵 @kiaanbhatta on TikTok",
+            kiaan.links.tiktok
+        )}
         `;
     }
 
@@ -713,9 +805,9 @@ function getAnswer(question) {
             <br><br>
 
             ${link(
-                "▶️ Kiaan Bhatta on YouTube",
-                kiaan.links.youtube
-            )}
+            "▶️ Kiaan Bhatta on YouTube",
+            kiaan.links.youtube
+        )}
         `;
     }
 
@@ -736,9 +828,9 @@ function getAnswer(question) {
             <br><br>
 
             ${link(
-                "🔗 Kiaan's Linktree",
-                kiaan.links.linktree
-            )}
+            "🔗 Kiaan's Linktree",
+            kiaan.links.linktree
+        )}
         `;
     }
 
@@ -758,9 +850,9 @@ function getAnswer(question) {
             <br><br>
 
             ${link(
-                "🌐 kiaanbhatta.com.np",
-                kiaan.links.portfolio
-            )}
+            "🌐 kiaanbhatta.com.np",
+            kiaan.links.portfolio
+        )}
         `;
     }
 
@@ -781,8 +873,8 @@ function getAnswer(question) {
             <br><br>
 
             ${kiaan.interests.map(x =>
-                `• ${x}`
-            ).join("<br>")}
+            `• ${x}`
+        ).join("<br>")}
         `;
     }
 
@@ -1012,7 +1104,7 @@ function askQuestion(question) {
 // FORM
 // ======================================================
 
-chatForm.addEventListener("submit", function(event) {
+chatForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -1043,7 +1135,7 @@ function escapeHTML(text) {
 // ENTER KEY
 // ======================================================
 
-userInput.addEventListener("keydown", function(event) {
+userInput.addEventListener("keydown", function (event) {
 
     if (event.key === "Enter") {
 

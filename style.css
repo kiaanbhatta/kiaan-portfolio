@@ -2681,3 +2681,9 @@ img {
     display: flex;
     gap: 10px;
 }
+
+.last-update{
+    margin: 10px auto;
+    color : #8e8d8d;
+    text-align: center;
+}
