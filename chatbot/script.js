@@ -350,18 +350,34 @@ function getAnswer(question) {
     ) {
 
         return `
-            rajmati,
-            jay,
-            dev,
-            kamala,
-            shanti,
-            indra,
-            godawari,
-            ram,
-            bishnu,
-            dhani,
-            narendra_modi,
+            rajmati
+            <br>
+            jay
+            <br>
+            dev
+            <br>
+            kamala
+            <br>
+            shanti
+            <br>
+            indra
+            <br>
+            godawari
+            <br>
+            ram
+            <br>
+            bishnu
+            <br>
+            dhani
+            <br>
+            narendra_modi
+            <br>
             parwati
+            <br>
+            tek
+            <br>
+            mahesh dalle
+
         `;
     }
 
@@ -427,6 +443,27 @@ function getAnswer(question) {
         `;
     }
 
+      // ----------------------------------------------
+    // WHO IS kiaan father
+    // ----------------------------------------------
+
+    if (
+        q.includes("kiaan father")||
+        q.includes("father") ||
+        q.includes("who is kiaan father") ||
+        q.includes("Father") 
+        
+    ) {
+
+        return `
+            <strong>Khem Raj bhatta</strong>
+
+            
+
+           
+        `;
+    }
+
     // ----------------------------------------------
     // Friends
     // ----------------------------------------------
@@ -439,12 +476,43 @@ function getAnswer(question) {
         q.includes("ridam")||
         q.includes("prashant")||
         q.includes("pratik")||
-        q.includes("saroj")
+        q.includes("saroj") ||
+        q.includes("roank") ||
+        q.includes("gabbu")
+
         
     ) {
 
         return `
             <strong>He</strong> is Kiaan's Friend
+
+            <br><br>
+
+            
+
+           
+        `;
+    }
+
+        // ----------------------------------------------
+    // Wrong words
+    // ----------------------------------------------
+
+    if (
+        q.includes("machickne")||
+        q.includes("muji")||
+        q.includes("lado")||
+        q.includes("putti")||
+        q.includes("gulo")||
+        q.includes("fuck")||
+        q.includes("randi")
+        
+
+        
+    ) {
+
+        return `
+            Teri ija <strong>chik</strong>
 
             <br><br>
 

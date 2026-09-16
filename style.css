@@ -866,6 +866,25 @@ nav a:hover {
 
 }
 
+.new-box{
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.view-more-project{
+    background-color: black;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+
+
 
 /* ---------- SERVICES ---------- */
 
