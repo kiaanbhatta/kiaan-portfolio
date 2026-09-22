@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Kiaan Bhatta | Software Engineer & AI/ML Enthusiast</title>
+
+    <meta name="description"
+        content="Kiaan Bhatta - Class 9 student, frontend developer and future Software Engineer & AI/ML Engineer.">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+
+</head>
+
+<style>
+    /* =========================================================
+   GUIDE PAGE
+   Kiaan Bhatta Portfolio Theme
+   White + Black + Blue
+========================================================= */
+
+
+/* ================= HERO ================= */
+
+.guide-hero {
+
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(#f8fafc 1px, transparent 1px),
+        linear-gradient(90deg, #f8fafc 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    padding: 100px 0;
+
+}
+
+
+.guide-hero .container {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.guide-hero-content {
+
+    animation: guideHeroAppear 0.8s ease forwards;
+
+}
+
+
+.guide-label {
+
+    display: inline-block;
+
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.guide-hero h1 {
+
+    font-size: clamp(50px, 7vw, 80px);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    max-width: 700px;
+
+}
+
+
+.guide-hero h1 span {
+
+    display: block;
+
+    color: #2563eb;
+
+}
+
+
+.guide-hero-content > p {
+
+    max-width: 600px;
+
+    color: #666666;
+
+    font-size: 17px;
+
+    margin-top: 28px;
+
+}
+
+
+.guide-hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 32px;
+
+}
+
+
+/* ================= CODE CARD ================= */
+
+.guide-code-card {
+
+    background: #111111;
+
+    color: white;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.15);
+
+    animation:
+        guideFloat 5s ease-in-out infinite;
+
+}
+
+
+.guide-code-header {
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+    background: #181818;
+
+    border-bottom: 1px solid #292929;
+
+}
+
+
+.guide-code-header p {
+
+    margin: 0 auto;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #888888;
+
+}
+
+
+.code-dots {
+
+    display: flex;
+
+    gap: 6px;
+
+}
+
+
+.code-dots span {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+}
+
+
+.code-dots span:nth-child(1) {
+    background: #ff5f57;
+}
+
+
+.code-dots span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+
+.code-dots span:nth-child(3) {
+    background: #28c840;
+}
+
+
+.guide-code {
+
+    padding: 35px 30px;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 14px;
+
+    line-height: 2.2;
+
+}
+
+
+.code-indent {
+
+    padding-left: 25px;
+
+}
+
+
+.code-blue {
+    color: #60a5fa;
+}
+
+
+.code-string {
+    color: #86efac;
+}
+
+
+.code-cursor {
+
+    color: #60a5fa;
+
+    animation: guideBlink 1s infinite;
+
+}
+
+
+/* ================= SECTION ================= */
+
+.guide-section {
+
+    background: #ffffff;
+
+}
+
+
+.guide-heading {
+
+    text-align: center;
+
+}
+
+
+.guide-heading > p {
+
+    display: inline-block;
+
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 20px;
+
+    padding: 6px 14px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.guide-heading h2 {
+
+    margin-top: 15px;
+
+}
+
+
+.guide-heading h2 span {
+
+    color: #2563eb;
+
+}
+
+
+.guide-description p {
+
+    color: #777777;
+
+    font-size: 16px;
+
+    max-width: 650px;
+
+    margin: 18px auto 0;
+
+}
+
+
+/* ================= GUIDE GRID ================= */
+
+.guide-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* ================= LEARNING CARD ================= */
+
+.learning-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    transition:
+        0.35s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.learning-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 3px;
+
+    background: #2563eb;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: 0.35s ease;
+
+}
+
+
+.learning-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.learning-card:hover::before {
+
+    transform: scaleX(1);
+
+}
+
+
+/* ================= CARD TOP ================= */
+
+.learning-card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.language-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 800;
+
+    font-size: 16px;
+
+}
+
+
+/* JavaScript */
+
+.javascript-icon {
+
+    background: #fef3c7;
+
+    color: #111111;
+
+}
+
+
+/* CSS */
+
+.css-icon {
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+}
+
+
+/* HTML */
+
+.html-icon {
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+}
+
+
+/* More */
+
+.more-icon {
+
+    background: #f3f4f6;
+
+    color: #555555;
+
+    font-size: 28px;
+
+}
+
+
+.card-number {
+
+    font-family: monospace;
+
+    color: #999999;
+
+    font-size: 13px;
+
+}
+
+
+/* ================= CARD CONTENT ================= */
+
+.learning-category {
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.learning-content h3 {
+
+    font-size: 27px;
+
+    margin:
+        8px 0 12px;
+
+}
+
+
+.learning-content > p {
+
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ================= TAGS ================= */
+
+.learning-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin:
+        20px 0 25px;
+
+}
+
+
+.learning-tags span {
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    background: #f3f4f6;
+
+    color: #555555;
+
+    font-size: 11px;
+
+}
+
+
+/* ================= BUTTON ================= */
+
+.learning-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    padding: 12px 17px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+
+}
+
+
+.learning-button:hover {
+
+    background: #2563eb;
+
+    transform: translateY(-2px);
+
+}
+
+
+.learning-button span {
+
+    font-size: 18px;
+
+}
+
+
+.disabled-button {
+
+    border: none;
+
+    cursor: default;
+
+    background: #f1f1f1;
+
+    color: #999999;
+
+}
+
+
+.disabled-button:hover {
+
+    background: #f1f1f1;
+
+    color: #999999;
+
+    transform: none;
+
+}
+
+
+/* ================= COMING SOON ================= */
+
+.coming-soon-card {
+
+    background: #fafafa;
+
+}
+
+
+/* ================= PDF SECTION ================= */
+
+.pdf-section {
+
+    background: #f4f8fc;
+
+}
+
+
+/* ================= PDF GRID ================= */
+
+.pdf-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* ================= PDF CARD ================= */
+
+.pdf-card {
+
+    background: #ffffff;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 14px;
+
+    padding: 28px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.pdf-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.07);
+
+}
+
+
+.pdf-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 12px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 22px;
+
+}
+
+
+.pdf-info > span {
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.pdf-info h3 {
+
+    font-size: 21px;
+
+    margin: 8px 0;
+
+}
+
+
+.pdf-info p {
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ================= PDF BUTTONS ================= */
+
+.pdf-buttons {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.pdf-view-button {
+
+    flex: 1;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    padding: 11px 15px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.pdf-view-button:hover {
+
+    background: #2563eb;
+
+}
+
+
+.pdf-download-button {
+
+    width: 45px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.pdf-download-button:hover {
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+}
+
+
+/* ================= CTA ================= */
+
+.guide-cta {
+
+    padding: 120px 0;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    text-align: center;
+
+}
+
+
+.guide-cta-content > p:first-child {
+
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.guide-cta h2 {
+
+    font-size: clamp(40px, 5vw, 62px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    margin: 15px 0;
+
+}
+
+
+.guide-cta h2 span {
+
+    color: #60a5fa;
+
+}
+
+
+.cta-description {
+
+    color: #999999;
+
+    max-width: 500px;
+
+    margin: 0 auto 30px;
+
+    font-size: 15px;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer strong span {
+
+    color: #2563eb;
+
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes guideHeroAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes guideFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+
+}
+
+
+@keyframes guideBlink {
+
+    50% {
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .guide-hero .container {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .guide-code-card {
+
+        max-width: 650px;
+
+        width: 100%;
+
+        margin: auto;
+
+    }
+
+
+    .guide-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pdf-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .guide-hero {
+
+        min-height: auto;
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .guide-hero h1 {
+
+        font-size: 48px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .guide-hero-content > p {
+
+        font-size: 15px;
+
+    }
+
+
+    .guide-hero-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .guide-hero-buttons a {
+
+        text-align: center;
+
+    }
+
+
+    .guide-code {
+
+        padding: 25px 18px;
+
+        font-size: 11px;
+
+        overflow-x: auto;
+
+    }
+
+
+    .learning-card {
+
+        padding: 25px;
+
+    }
+
+
+    .pdf-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .guide-cta {
+
+        padding: 80px 0;
+
+    }
+
+
+    .guide-cta h2 {
+
+        letter-spacing: -2px;
+
+    }
+
+}
+</style>
+
+<body>
+
+    <!-- FLOATING AI -->
+    <a href="/chatbot/chatbot.html" class="ai-float"  aria-label="Chat with AI Agent of Kiaan">
+        <span class="ai-pulse"></span>
+
+        <img src="/images/ai.png" style="border-radius: 50%;" alt="">
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                Kiaan<span>.</span>
+            </a>
+
+            <nav>
+                <a href="/index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="/project.html">Projects</a>
+                <a href="#services">Guide</a>
+                <a href="chatbot/chatbot.html">Chat Bot</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#contact" class="nav-button">
+                Let's Talk
+            </a>
+
+        </div>
+    </header>
+
+
+    </header>
+
+
+    <main>
+
+                <!-- ================= WEB GUIDES ================= -->
+
+        <section class="section guide-section"
+                 id="web-guides">
+
+            <div class="container">
+
+                <div class="section-heading guide-heading">
+
+                    <p>
+                        ONLINE GUIDES
+                    </p>
+
+                    <h2>
+                        Learn from
+                        <span>Basic to Advanced</span>
+                    </h2>
+
+                    <div class="guide-description">
+                        <p>
+                            Select a technology below to start learning
+                            through structured lessons and examples.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="guide-grid">
+
+
+                    <!-- ================= JAVASCRIPT ================= -->
+
+                    <div class="learning-card">
+
+                        <div class="learning-card-top">
+
+                            <div class="language-icon javascript-icon">
+                                JS
+                            </div>
+
+                            <span class="card-number">
+                                01
+                            </span>
+
+                        </div>
+
+
+                        <div class="learning-content">
+
+                            <span class="learning-category">
+                                PROGRAMMING LANGUAGE
+                            </span>
+
+                            <h3>
+                                JavaScript
+                            </h3>
+
+                            <p>
+                                Learn JavaScript from the very beginning
+                                and gradually move towards advanced
+                                concepts, DOM manipulation, functions,
+                                objects, events and more.
+                            </p>
+
+
+                            <div class="learning-tags">
+
+                                <span>Beginner</span>
+
+                                <span>Intermediate</span>
+
+                                <span>Advanced</span>
+
+                            </div>
+
+
+                            <!-- CHANGE THIS LINK -->
+
+                            <a href="javascript.html"
+                               class="learning-button">
+
+                                Start Learning
+
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= CSS ================= -->
+
+                    <div class="learning-card">
+
+                        <div class="learning-card-top">
+
+                            <div class="language-icon css-icon">
+                                CSS
+                            </div>
+
+                            <span class="card-number">
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <div class="learning-content">
+
+                            <span class="learning-category">
+                                STYLING LANGUAGE
+                            </span>
+
+                            <h3>
+                                CSS
+                            </h3>
+
+                            <p>
+                                Learn CSS from basic selectors and
+                                properties to Flexbox, Grid, responsive
+                                design, animations and advanced styling.
+                            </p>
+
+
+                            <div class="learning-tags">
+
+                                <span>Beginner</span>
+
+                                <span>Intermediate</span>
+
+                                <span>Advanced</span>
+
+                            </div>
+
+
+                            <!-- CHANGE THIS LINK -->
+
+                            <a href="css.html"
+                               class="learning-button">
+
+                                Start Learning
+
+                                <span>→</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= HTML ================= -->
+
+                    
+
+
+
+                    <!-- ================= MORE ================= -->
+
+                    <div class="learning-card coming-soon-card">
+
+                        <div class="learning-card-top">
+
+                            <div class="language-icon more-icon">
+                                +
+                            </div>
+
+                            <span class="card-number">
+                                04
+                            </span>
+
+                        </div>
+
+
+                        <div class="learning-content">
+
+                            <span class="learning-category">
+                                COMING SOON
+                            </span>
+
+                            <h3>
+                                More Technologies
+                            </h3>
+
+                            <p>
+                                More programming languages and web
+                                development resources will be added
+                                to this learning library.
+                            </p>
+
+
+                            <div class="learning-tags">
+
+                                <span>Python</span>
+
+                                <span>React</span>
+
+                                <span>Git</span>
+
+                            </div>
+
+
+                            <button class="learning-button disabled-button">
+                                Coming Soon
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PDF SECTION ================= -->
+
+        <section class="section pdf-section"
+                 id="pdf-guides">
+
+            <div class="container">
+
+                <div class="section-heading guide-heading">
+
+                    <p>
+                        PDF RESOURCES
+                    </p>
+
+                    <h2>
+                        Learn with
+                        <span>PDF Guides</span>
+                    </h2>
+
+                    <div class="guide-description">
+                        <p>
+                            Read your learning materials online or
+                            download them for later.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="pdf-grid">
+
+
+                    <!-- JAVASCRIPT PDF -->
+
+                    <div class="pdf-card">
+
+                        <div class="pdf-icon">
+                            PDF
+                        </div>
+
+                        <div class="pdf-info">
+
+                            <span>
+                                DOCUMENT 01
+                            </span>
+
+                            <h3>
+                                JavaScript Guide
+                            </h3>
+
+                            <p>
+                                JavaScript notes and learning material
+                                from basic to advanced concepts.
+                            </p>
+
+                        </div>
+
+
+                        <!-- CHANGE PDF NAME -->
+
+                        <div class="pdf-buttons">
+
+                            <a href="/files/javascript.pdf"
+                               target="_blank"
+                               class="pdf-view-button">
+
+                                View PDF
+                                <span>↗</span>
+
+                            </a>
+
+                            <a href="/files/javascript.pdf"
+                               download
+                               class="pdf-download-button">
+
+                                ↓
+
+                            </a>
+
+                        </div>
+
+                    
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+       
+
+                    
+
+                    
+
+
+
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="contact-section">
+
+            <div class="container contact-container">
+
+                <div class="contact-heading">
+
+                    <p>GET IN TOUCH</p>
+
+                    <h2>
+                        Have an idea?
+                        <span>Let's build it.</span>
+                    </h2>
+
+                    <p class="contact-description">
+                        If you need a frontend website or simply want
+                        to connect, feel free to reach out.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-links">
+
+                    <a href="https://wa.me/9779745584725" target="_blank" class="contact-link">
+                        <span>WhatsApp</span>
+                        <span>↗</span>
+                    </a>
+
+                    <a href="https://github.com/kiaanbhatta" target="_blank" class="contact-link">
+                        <span>GitHub</span>
+                        <span>↗</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/kiaan-bhatta-737a4a412/" target="_blank" class="contact-link">
+                        <span>LinkedIn</span>
+                        <span>↗</span>
+                    </a>
+
+                    <a href="https://www.facebook.com/kiaanbhatta2" target="_blank" class="contact-link">
+                        <span>Facebook</span>
+                        <span>↗</span>
+                    </a>
+
+                    <a href="https://linktr.ee/kiaanbhatta" target="_blank" class="contact-link">
+                        <span>Linktree</span>
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <p class="last-update">Last update :- 16/9/2026</p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <div>
+                <a href="#home" class="logo">
+                    Kiaan<span>.</span>
+                </a>
+
+                <p>
+                    Learning today. Building tomorrow.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <p>© 2026 Kiaan Bhatta</p>
+                <p>Build with ❤️ by Kiaan Bhatta</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="/script.js"></script>
+
+    <script>
+        "use strict";
+
+/* =========================================
+   GUIDE PAGE JAVASCRIPT
+========================================= */
+
+
+/* Smooth card animation */
+
+const cards = document.querySelectorAll(
+    ".learning-card, .pdf-card"
+);
+
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+
+                entry.target.style.transform =
+                    "translateY(0)";
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+
+cards.forEach((card) => {
+
+    card.style.opacity = "0";
+
+    card.style.transform =
+        "translateY(25px)";
+
+    card.style.transition =
+        "opacity 0.6s ease, transform 0.6s ease";
+
+    observer.observe(card);
+
+});
+    </script>
+
+</body>
+
+</html>
