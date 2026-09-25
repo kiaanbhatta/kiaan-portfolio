@@ -2706,3 +2706,205 @@ img {
     color : #8e8d8d;
     text-align: center;
 }
+
+.tech-orbit {
+  --stage-size: 460px;
+  --outer-radius: 195px;
+  --inner-radius: 120px;
+  position: relative;
+  padding: 90px 24px 110px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 20%, #f3f6fb, #e7ecf5 70%);
+  overflow: hidden;
+}
+
+.tech-orbit__intro h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 700;
+  color: #16213a;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+.tech-orbit__intro p {
+  color: #5b6478;
+  font-size: 1rem;
+  margin: 0 0 60px;
+}
+
+.tech-orbit__stage {
+  position: relative;
+  width: var(--stage-size);
+  height: var(--stage-size);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.tech-orbit__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(34px);
+  pointer-events: none;
+}
+.tech-orbit__glow--outer {
+  width: calc(var(--outer-radius) * 2 + 70px);
+  height: calc(var(--outer-radius) * 2 + 70px);
+  background: radial-gradient(circle, rgba(168, 131, 255, 0.35), rgba(168, 131, 255, 0) 70%);
+}
+.tech-orbit__glow--inner {
+  width: calc(var(--inner-radius) * 2 + 50px);
+  height: calc(var(--inner-radius) * 2 + 50px);
+  background: radial-gradient(circle, rgba(120, 190, 255, 0.42), rgba(120, 190, 255, 0) 70%);
+}
+
+.tech-orbit__ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(122, 110, 175, 0.28);
+}
+.tech-orbit__ring--outer {
+  width: calc(var(--outer-radius) * 2);
+  height: calc(var(--outer-radius) * 2);
+}
+.tech-orbit__ring--inner {
+  width: calc(var(--inner-radius) * 2);
+  height: calc(var(--inner-radius) * 2);
+  border-color: rgba(90, 150, 220, 0.32);
+}
+
+.tech-orbit__core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 76px;
+  height: 76px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #16213a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 34px rgba(22, 33, 58, 0.35);
+  z-index: 3;
+}
+.tech-orbit__core i {
+  font-size: 1.4rem;
+  background: linear-gradient(135deg, #7c9dff, #b98bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tech-orbit__path-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tech-orbit__path-wrap--outer {
+  width: calc(var(--outer-radius) * 2);
+  height: calc(var(--outer-radius) * 2);
+}
+.tech-orbit__path-wrap--inner {
+  width: calc(var(--inner-radius) * 2);
+  height: calc(var(--inner-radius) * 2);
+}
+
+.tech-orbit__path {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.tech-orbit__path--outer { animation: orbit-cw 10s linear infinite; }
+.tech-orbit__path--inner { animation: orbit-ccw 12s linear infinite; }
+
+.tech-orbit__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.tech-orbit__path--outer .tech-orbit__item {
+  transform: rotate(var(--angle)) translateX(var(--outer-radius)) rotate(calc(-1 * var(--angle)));
+}
+.tech-orbit__path--inner .tech-orbit__item {
+  transform: rotate(var(--angle)) translateX(var(--inner-radius)) rotate(calc(-1 * var(--angle)));
+}
+
+.tech-orbit__node {
+  position: relative;
+  width: 48px;
+  height:48px;
+  margin: -29px 0 0 -29px;
+  border-radius: 50%;
+  background: #1c2740;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(20, 25, 50, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  cursor: default;
+}
+.tech-orbit__path--outer .tech-orbit__node { animation: orbit-ccw 26s linear infinite; }
+.tech-orbit__path--inner .tech-orbit__node { animation: orbit-cw 18s linear infinite; }
+
+.tech-orbit__stage:hover .tech-orbit__path,
+.tech-orbit__stage:hover .tech-orbit__node {
+  animation-play-state: paused;
+}
+
+.tech-orbit__node i { font-size: 1.15rem; }
+.tech-orbit__node[data-tip="JavaScript"] i   { color: #f7df1e; }
+.tech-orbit__node[data-tip="Node.js"] i      { color: #7fba59; }
+.tech-orbit__node[data-tip="CSS3"] i         { color: #367eea; }
+.tech-orbit__node[data-tip="HTML5"] i        { color: #f15532; }
+.tech-orbit__node[data-tip="React"] i        { color: #5fd2ec; }
+.tech-orbit__node[data-tip="GitHub"] i       { color: #e5e7eb; }
+
+.tech-orbit__node::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #16213a;
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(20, 25, 50, 0.16);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 5;
+}
+.tech-orbit__node:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@keyframes orbit-cw  { from { transform: rotate(0deg);   } to { transform: rotate(360deg);  } }
+@keyframes orbit-ccw { from { transform: rotate(0deg);   } to { transform: rotate(-360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-orbit__path,
+  .tech-orbit__node { animation: none !important; }
+}
+
+
+
+@media (max-width: 700px) {
+  .tech-orbit { --stage-size: 280px; --outer-radius: 120px; --inner-radius: 72px; }
+  .tech-orbit__core { width: 52px; height: 52px; }
+  .tech-orbit__core i { font-size: 1.05rem; }
+  .tech-orbit__node { width: 38px; height: 38px; margin: -19px 0 0 -19px; }
+  .tech-orbit__node i { font-size: 0.9rem; }
+}
