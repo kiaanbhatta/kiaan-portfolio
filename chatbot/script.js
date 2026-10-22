@@ -346,7 +346,7 @@ function getAnswer(question) {
         q.includes("khem") ||
         q.includes("gita")
 
-        
+
     ) {
 
         return `
@@ -424,7 +424,7 @@ function getAnswer(question) {
     // ----------------------------------------------
 
     if (
-        q.includes("kiros")||
+        q.includes("kiros") ||
         q.includes("who is kiros") ||
         q.includes("who is kiros") ||
         q.includes("tell me about kiros") ||
@@ -443,16 +443,97 @@ function getAnswer(question) {
         `;
     }
 
-      // ----------------------------------------------
+    // ----------------------------------------------
+    // WHO IS DUDU
+    // ----------------------------------------------
+
+    if (
+        q.includes("dugu") ||
+        q.includes("dudu") ||
+        q.includes("prince") ||
+        q.includes("who is dugu") ||
+        q.includes("who is prince") ||
+        q.includes("who is dudu") ||
+        q.includes("tell me about dudu") ||
+        q.includes("about dudu")
+    ) {
+
+        return `
+            <strong>DUDU</strong> dada <strong> Dhwaa </strong>
+
+            <br><br>
+
+            Gunnu
+
+           
+        `;
+    }
+
+
+
+    // ----------------------------------------------
+    // WHO IS DUDU
+    // ----------------------------------------------
+
+    if (
+        q.includes("jenish") ||
+        q.includes("jenisha") ||
+        q.includes("gelwa") ||
+        q.includes("who is gelwa") ||
+        q.includes("who is jenish") ||
+        q.includes("who is gelwa") ||
+        q.includes("tell me about jenish") ||
+        q.includes("about jenish")
+    ) {
+
+        return `
+            <strong>Gelwa</strong> bro <strong> saraswati </strong>
+
+            <br><br>
+
+
+           
+        `;
+    }
+
+
+    // ----------------------------------------------
+    // WHO IS DUDU
+    // ----------------------------------------------
+
+    if (
+        q.includes("dipisha") ||
+        q.includes("himma") ||
+        q.includes("dhimma") ||
+        q.includes("himal") ||
+        q.includes("who is dispisha") ||
+        q.includes("who is dhimma") ||
+        q.includes("who is dipisha") ||
+        q.includes("tell me about dipisha") ||
+        q.includes("about dipisha")
+    ) {
+
+        return `
+            <strong>Himma</strong> dada <strong> 🐘 </strong>
+
+            <br><br>
+
+            Himal Suiii
+
+           
+        `;
+    }
+
+    // ----------------------------------------------
     // WHO IS kiaan father
     // ----------------------------------------------
 
     if (
-        q.includes("kiaan father")||
+        q.includes("kiaan father") ||
         q.includes("father") ||
         q.includes("who is kiaan father") ||
-        q.includes("Father") 
-        
+        q.includes("Father")
+
     ) {
 
         return `
@@ -469,18 +550,18 @@ function getAnswer(question) {
     // ----------------------------------------------
 
     if (
-        q.includes("aayush")||
-        q.includes("aasish")||
-        q.includes("rojin")||
-        q.includes("anmol")||
-        q.includes("ridam")||
-        q.includes("prashant")||
-        q.includes("pratik")||
+        q.includes("aayush") ||
+        q.includes("aasish") ||
+        q.includes("rojin") ||
+        q.includes("anmol") ||
+        q.includes("ridam") ||
+        q.includes("prashant") ||
+        q.includes("pratik") ||
         q.includes("saroj") ||
         q.includes("roank") ||
         q.includes("gabbu")
 
-        
+
     ) {
 
         return `
@@ -494,21 +575,21 @@ function getAnswer(question) {
         `;
     }
 
-        // ----------------------------------------------
+    // ----------------------------------------------
     // Wrong words
     // ----------------------------------------------
 
     if (
-        q.includes("machickne")||
-        q.includes("muji")||
-        q.includes("lado")||
-        q.includes("putti")||
-        q.includes("gulo")||
-        q.includes("fuck")||
+        q.includes("machickne") ||
+        q.includes("muji") ||
+        q.includes("lado") ||
+        q.includes("putti") ||
+        q.includes("gulo") ||
+        q.includes("fuck") ||
         q.includes("randi")
-        
 
-        
+
+
     ) {
 
         return `
