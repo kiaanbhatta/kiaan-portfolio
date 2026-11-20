@@ -465,6 +465,9 @@ function getAnswer(question) {
 
             Gunnu
 
+             <audio src="/files/dudu.mp3" autoplay></audio>
+
+
            
         `;
     }
@@ -497,6 +500,25 @@ function getAnswer(question) {
     }
 
 
+    if (
+        
+        q.includes("xxx") || 
+        q.includes("babita") 
+    ) {
+
+        return ` 
+
+           <h1 style="font-size : 80px;">🥶      😎</h1>
+                        <audio src="/files/among.mp3" autoplay ></audio>
+
+
+
+        `;
+    }
+
+
+    
+
     // ----------------------------------------------
     // WHO IS DUDU
     // ----------------------------------------------
@@ -504,6 +526,7 @@ function getAnswer(question) {
     if (
         q.includes("dipisha") ||
         q.includes("himma") ||
+        q.includes("elephant") ||
         q.includes("dhimma") ||
         q.includes("himal") ||
         q.includes("who is dispisha") ||
@@ -514,11 +537,17 @@ function getAnswer(question) {
     ) {
 
         return `
-            <strong>Himma</strong> dada <strong> 🐘 </strong>
+            <strong>Himma</strong> bahini <strong> 🐘 </strong>
 
             <br><br>
 
             Himal Suiii
+
+            <br><br>
+
+
+            <audio src="/files/elephant.mp3" autoplay></audio>
+
 
            
         `;
@@ -624,13 +653,16 @@ function getAnswer(question) {
 
     if (
         q.includes("gf") ||
+        q.includes("who is kiaan girlfriend") ||
         q.includes("wife") ||
         q.includes("girl friend") ||
         q.includes("girlfriend")
     ) {
 
         return `
-            <strong>your Mom</strong>.
+            <strong>your Mom</strong>
+            <audio src="/files/among.mp3" autoplay ></audio>
+
         `;
     }
 
